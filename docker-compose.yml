@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web:
+      container_name: rails_docker
+      build: .
+      restart: always
+      ports:
+        - "127.0.0.1:3000:3000"
+      working_dir: /code
+      volumes:
+        - ./:/code:z
+
+  mariadb:
+    container_name: rbdemodb
+    image: bitnami/mariadb
+    env_file: .env
+    ports:
+      - "3309:3306"
+    volumes:
+      - demo_data:/bitnami
+
+volumes:
+  demo_data:
+
+# This is to allow docker to work properly on a VPN.
+# Can be safely removed if not needed
+networks:
+  default:
+    external:
+      name: localdev
