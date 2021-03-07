@@ -5,6 +5,7 @@ services:
       container_name: rails_docker
       build: .
       restart: always
+      env_file: .env
       ports:
         - "127.0.0.1:3000:3000"
       working_dir: /code
@@ -12,7 +13,7 @@ services:
         - ./:/code:z
 
   mariadb:
-    container_name: rbdemodb
+    container_name: rails_db
     image: bitnami/mariadb
     env_file: .env
     ports:

@@ -5,13 +5,18 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: mysql2
+  host: <%= ENV.fetch("DB_HOST") %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: <%= ENV.fetch("MARIADB_DATABASE") %>
+  username: <%= ENV.fetch("MARIADB_USER") %>
+  password: <%= ENV.fetch("MARIADB_PASSWORD") %>
+  encoding: utf8
+  port: 3306
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
