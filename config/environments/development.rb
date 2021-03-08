@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Whitelist docker ip for web_console
   config.web_console.whitelisted_ips = '172.19.0.1'
+
+  # Add Rack::LiveReload to the bottom of the middleware stack with the default options:
+  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
 end
