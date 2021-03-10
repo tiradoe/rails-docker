@@ -11,6 +11,9 @@ WORKDIR /code
 COPY Gemfile /code/Gemfile
 COPY Gemfile.lock /code/Gemfile.lock
 RUN bundle install
+
+COPY package.json /code/package.json
+RUN yarn install
 COPY . /code
 
 # Run the entrypoint script to enable livereload

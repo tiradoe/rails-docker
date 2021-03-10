@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup (Todo: Make this easier)
+1. Run docker-compose up --build -d
+2. Run ./postInstall.sh
+3. Run docker-compose down
+4. Uncomment the last line in Procfile.dev
+5. Run docker-compose up --build
+6. Open localhost:3000 in a browser
