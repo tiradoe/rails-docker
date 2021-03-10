@@ -9,6 +9,7 @@
     "@rails/webpacker": "5.2.1",
     "autoprefixer": "^9",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "eslint-plugin-react": "^7.22.0",
     "postcss": "^7",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -19,6 +20,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "eslint": "^7.21.0",
     "webpack-dev-server": "^3.11.2"
   }
 }
