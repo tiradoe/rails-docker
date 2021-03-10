@@ -1,4 +1,4 @@
-# README
+# Rails Docker Starter
 
 ## Setup (Todo: Make this easier)
 1. Run docker-compose up --build -d
