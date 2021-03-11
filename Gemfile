@@ -63,4 +63,6 @@ gem 'tailwindcss-rails', '~> 0.3.3'
 
 gem 'react-rails', '~> 2.6'
 
-gem "foreman", "~> 0.87.2"
+gem 'foreman', '~> 0.87.2'
+
+gem 'rexml'
