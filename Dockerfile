@@ -11,9 +11,6 @@ WORKDIR /code
 COPY Gemfile /code/Gemfile
 COPY Gemfile.lock /code/Gemfile.lock
 RUN bundle install
-
-COPY package.json /code/package.json
-RUN yarn install
 COPY . /code
 
 # Run the entrypoint script to enable livereload
@@ -24,4 +21,4 @@ EXPOSE 3000
 EXPOSE 35729
 
 # Start rails server
-CMD ["rails", "server", "-b", "0.0.0.0"]
+#CMD ["rails", "server", "-b", "0.0.0.0"]
