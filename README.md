@@ -10,7 +10,8 @@ Login credentials for pgAdmin and postgres are kept in the env file.
 
 ### rails.sh
 Easily run commands inside the rails docker container with `./rails.sh`.
-e.g.
 
+
+e.g.
 `./rails.sh rails db:migrate`
 
